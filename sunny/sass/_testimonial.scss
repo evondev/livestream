@@ -1,0 +1,119 @@
+.testimonial {
+  margin-bottom: 270px;
+  &-heading {
+    margin-bottom: 60px;
+  }
+  &-main {
+    max-width: 1070px;
+    position: relative;
+    overflow: hidden;
+  }
+  &-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  &-list {
+    display: flex;
+    position: relative;
+    transition: all 0.5s linear;
+  }
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 25px;
+    flex: 1 0 100%;
+  }
+  &-content {
+    max-width: 450px;
+  }
+  &-rating {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    color: #ffbb0c;
+  }
+  &-desc {
+    color: black;
+    margin-bottom: 40px;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  &-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  &-job {
+    font-size: 18px;
+    color: black;
+  }
+  @media screen and (min-width: 1024px) {
+    &-main {
+      padding-left: 50px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 75px;
+  }
+  @media screen and (max-width: 767px) {
+    &-item {
+      flex-direction: column;
+      gap: 30px 0;
+    }
+    &-heading {
+      margin-bottom: 30px;
+    }
+    &-desc {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    &-name {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &-job {
+      font-size: 16px;
+    }
+    &-image {
+      height: 400px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+.arrows {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  border-radius: 16px 0px 0px 0px;
+  padding: 20px 0 0 30px;
+  gap: 0 20px;
+  display: flex;
+  z-index: 2;
+}
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  border: 2px solid;
+  &.disabled {
+    color: #d7d7d7;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,33 @@
+.explore {
+  margin-bottom: 292px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 50px;
+  }
+
+  &-heading {
+    margin-bottom: 20px;
+  }
+  &-desc {
+    margin-bottom: 33px;
+  }
+  @media screen and (min-width: 1024px) {
+    &-content {
+      max-width: 508px;
+      padding-right: 58px;
+    }
+    &-image {
+      transform: translateX(-50px);
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 75px;
+    &-main {
+      flex-direction: column-reverse;
+      gap: 50px 0;
+    }
+  }
+}

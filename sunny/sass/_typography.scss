@@ -1,0 +1,28 @@
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1;
+  color: $gray;
+}
+.heading {
+  font-family: $secondary-font;
+  color: $gray-darkest;
+  &--small {
+    line-height: 139%;
+    font-size: 36px;
+  }
+}
+.text {
+  font-weight: 300;
+  line-height: 176%;
+  font-size: 17px;
+  color: $gray-darker;
+  font-family: $third-font;
+}
+@media screen and (max-width: 767px) {
+  .heading {
+    &--small {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 35px;
+  &-toggle {
+    display: none;
+    font-size: 30px;
+    color: black;
+  }
+  &-link {
+    color: inherit;
+  }
+  @media screen and (max-width: 1023px) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 300px;
+    flex-direction: column;
+    align-items: stretch;
+    z-index: 9;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(100%);
+    &.is-show {
+      transform: translateX(0);
+    }
+    &-link {
+      display: block;
+      padding: 20px 25px;
+      width: 100%;
+    }
+    &-item:last-child,
+    &-item:nth-last-child(2) {
+      padding: 15px;
+    }
+    .btn {
+      width: 100%;
+    }
+    &-toggle {
+      display: block;
+    }
+  }
+}

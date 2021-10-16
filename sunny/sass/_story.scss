@@ -1,0 +1,88 @@
+.story {
+  margin-bottom: 270px;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+  }
+  &-image {
+    height: 230px;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      object-position: top;
+    }
+  }
+  &-title {
+    font-size: 19px;
+    color: black;
+    margin-bottom: 15px;
+    line-height: 158%;
+  }
+  &-desc {
+    margin-bottom: 23px;
+    line-height: 175%;
+    font-size: 15px;
+    color: $gray-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+  &-more {
+    font-size: 15px;
+    font-weight: 600;
+    color: $primary-color;
+    margin-top: auto;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+  }
+  &-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 75px;
+    &-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 300px;
+      grid-auto-flow: column;
+      grid-gap: 0 25px;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      grid-template-columns: unset;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-header {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.hero {
+  margin-bottom: 270px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-heading {
+    font-size: 64px;
+    line-height: 125%;
+    margin-bottom: 74px;
+  }
+  &-caption {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 48px;
+    padding-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    color: $gray-darkest;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background-color: $gray-darkest;
+    }
+  }
+  &-content {
+    width: 100%;
+  }
+  &-form {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    &-image {
+      transform: translateX(85px);
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-content {
+      max-width: 470px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 75px;
+    &-main {
+      flex-direction: column;
+      gap: 50px 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-heading {
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+    &-form {
+      grid-template-columns: 1fr;
+    }
+  }
+}
