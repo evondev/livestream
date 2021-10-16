@@ -1,0 +1,50 @@
+.caption {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $primary-color;
+  margin-bottom: 35px;
+}
+.heading {
+  font-size: 36px;
+  font-weight: 800;
+  color: white;
+  line-height: lineH(56, 36);
+  margin-bottom: 30px;
+  &--big {
+    font-size: 60px;
+  }
+}
+.text {
+  line-height: lineH(34, 18);
+  &--big {
+    font-size: 24px;
+  }
+}
+
+@include maxWidth(1023px) {
+  .caption {
+    margin-bottom: 10px;
+  }
+  .heading {
+    margin-bottom: 20px;
+    &--big {
+      font-size: 40px;
+    }
+  }
+}
+@include maxWidth(767px) {
+  .caption {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  .heading {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .text--big {
+    font-size: 20px;
+  }
+  body {
+    font-size: 16px;
+  }
+}

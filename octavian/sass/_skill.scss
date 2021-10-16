@@ -1,0 +1,80 @@
+.skill {
+  display: block;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-caption {
+    line-height: 1.88;
+    margin-bottom: 60px;
+  }
+  &-name {
+    color: $gray;
+  }
+  &-bar {
+    height: 10px;
+    width: 100%;
+    border-radius: 100rem;
+    background-color: $gray-dark;
+    margin-bottom: 30px;
+  }
+  &-percentage {
+    border-radius: inherit;
+    height: 100%;
+    background-image: linear-gradient(to right, $purple, $blue-light);
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+  }
+  &-number {
+    color: white;
+    font-size: 80px;
+    font-weight: 100;
+    margin-right: 55px;
+    flex-shrink: 0;
+    small {
+      font-size: 40px;
+    }
+  }
+  &-desc {
+    flex: 1;
+    line-height: 1.88;
+  }
+  &-item:first-child {
+    margin-bottom: 95px;
+  }
+  @media screen and (min-width: 1024px) {
+    &-left {
+      width: 100%;
+      max-width: 470px;
+    }
+    &-right {
+      width: 100%;
+      max-width: 570px;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    &-main {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    &-caption {
+      margin-bottom: 30px;
+    }
+    &-item:first-child {
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-caption {
+      font-size: 16px;
+    }
+    &-number {
+      font-size: 60px;
+      margin-right: 15px;
+    }
+  }
+}

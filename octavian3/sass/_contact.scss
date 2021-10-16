@@ -1,0 +1,49 @@
+.contact {
+  margin-bottom: -300px;
+  &-main {
+    padding: 135px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: url("../images/img9.png") no-repeat center;
+    background-color: $gray-darkest;
+    border-radius: 12px;
+    position: relative;
+  }
+  &-person {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  &-liquid {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+    pointer-events: none;
+  }
+  &-content {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+  }
+  &-desc {
+    margin-bottom: 60px;
+  }
+  display: block;
+  @include maxWidth(1023px) {
+    margin-bottom: -190px;
+    &-main {
+      padding: 50px 20px;
+    }
+    &-desc {
+      margin-bottom: 40px;
+      color: white;
+    }
+  }
+}

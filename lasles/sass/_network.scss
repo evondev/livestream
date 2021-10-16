@@ -1,0 +1,32 @@
+.network {
+  &-heading {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &-image {
+    margin-top: 155px;
+  }
+}
+.partner {
+  margin-bottom: 50px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 60px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .network-image {
+    margin-top: 50px;
+  }
+  .partner-container {
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .partner {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,111 @@
+.offer {
+  margin-bottom: 24rem;
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 11.5rem;
+    gap: 0 2rem;
+  }
+  &-item {
+    margin-left: 8rem;
+  }
+  // .slick-track {
+  //   display: flex;
+  //   gap: 0 8rem;
+  // }
+  &-text {
+    max-width: 60rem;
+  }
+  &-image {
+    height: 56rem;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 6rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+  }
+  &-tour {
+    font-weight: 600;
+  }
+  &-title {
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 4.5rem;
+    font-size: 3rem;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 300;
+    ion-icon {
+      margin-right: 5px;
+      font-size: 3rem;
+    }
+  }
+  &-location {
+    display: flex;
+    align-items: center;
+    ion-icon {
+      color: $gray-lighter;
+    }
+  }
+  &-rating {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    &-list {
+      margin-left: -8rem;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10rem;
+    &-header {
+      margin-bottom: 5rem;
+    }
+    &-list {
+      transform: none;
+    }
+    &-item {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    // &-list {
+    //   display: grid;
+    //   justify-content: flex-start;
+    //   grid-auto-columns: 75%;
+    //   grid-auto-flow: column;
+    //   grid-gap: 0 5rem;
+    //   overflow: auto;
+    //   overflow-y: hidden;
+    //   scroll-snap-type: x mandatory;
+    //   scroll-snap-stop: always;
+    //   -ms-touch-action: manipulation;
+    //   touch-action: manipulation;
+    //   -webkit-overflow-scrolling: touch;
+    //   scroll-padding: 1rem;
+    //   grid-template-columns: unset;
+    // }
+    // &-list::-webkit-scrollbar {
+    //   display: none;
+    //   width: 0;
+    // }
+    // &-list > * {
+    //   scroll-snap-align: start;
+    // }
+  }
+}

@@ -1,0 +1,52 @@
+.hero {
+  display: block;
+  padding: 270px 0 380px;
+  color: white;
+  &-heading {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 120px;
+    margin-bottom: 15px;
+  }
+  &-caption {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  &-video {
+    display: flex;
+    align-items: center;
+    gap: 0 25px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  @include maxWidth(1599px) {
+    padding: 170px 0 280px;
+  }
+  @include maxWidth(1279px) {
+    padding: 70px 0;
+  }
+  @include maxWidth(1023px) {
+    padding: 40px 0;
+    &-heading {
+      font-size: 70px;
+    }
+    &-caption {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+  @include maxWidth(1023px) {
+    padding: 20px 0;
+    &-heading {
+      font-size: 40px;
+    }
+    &-caption {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    &-video img {
+      max-width: 40px;
+    }
+  }
+}

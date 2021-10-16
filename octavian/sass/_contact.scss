@@ -1,0 +1,98 @@
+.contact {
+  display: block;
+  &-main {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 100px;
+  }
+
+  &-mail {
+    display: inline-block;
+    color: white;
+    margin-top: 60px;
+    font-size: 48px;
+    font-weight: 600;
+  }
+  &-caption {
+    font-size: 36px;
+  }
+  &-phone {
+    color: white;
+    display: block;
+    margin: 60px 0;
+    font-weight: 300;
+    font-size: 48px;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+  .social-item {
+    width: 70px;
+    height: 70px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray-dark;
+    transition: background-color 0.2s ease;
+    &:hover {
+      background-color: $blue;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-left {
+      max-width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    &-main {
+      column-gap: 50px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    &-main {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &-mail {
+      font-size: 25px;
+      margin-top: 30px;
+    }
+    &-caption {
+      font-size: 25px;
+    }
+    &-phone {
+      font-size: 30px;
+      margin: 25px 0;
+    }
+    &-left {
+      text-align: center;
+    }
+    &-right {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-mail,
+    &-caption {
+      font-size: 20px;
+    }
+    &-phone {
+      margin: 15px 0;
+    }
+    .social {
+      column-gap: 15px;
+      &-item {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.footer {
+  background-color: $black;
+  line-height: 1.5;
+  &-main {
+    padding: 60px 0;
+    position: relative;
+  }
+  .container {
+    position: relative;
+  }
+  &-rocket {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: $blue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  @media screen and (max-width: 767px) {
+  }
+}

@@ -1,0 +1,55 @@
+@use "variables";
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: variables.$gray;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.secondary-font {
+  font-family: "Raleway", sans-serif;
+}
+.heading {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  color: white;
+  line-height: 1.556;
+  &--big {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  &--small {
+    margin-bottom: 25px;
+    font-size: 22px;
+  }
+}
+.text {
+  line-height: 1.88;
+}
+@media screen and (max-width: 1023px) {
+  body {
+    font-size: 16px;
+  }
+  .heading {
+    &--big {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    &--small {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .heading {
+    &--big {
+      font-size: 25px;
+    }
+    &--small {
+      font-size: 18px;
+    }
+  }
+}

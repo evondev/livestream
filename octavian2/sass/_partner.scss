@@ -1,0 +1,32 @@
+.partner {
+  margin-bottom: 150px;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 90px 0;
+  }
+  &-item {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    &:hover {
+      opacity: 0.1;
+    }
+  }
+  @include maxw(1023px) {
+    margin-bottom: 100px;
+    &-item {
+      padding: 0 25px;
+    }
+  }
+  @include maxw(767px) {
+    margin-bottom: 50px;
+    &-main {
+      grid-gap: 25px 15px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

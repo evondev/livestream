@@ -1,0 +1,103 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1;
+  color: $gray-light;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+input,
+button,
+textarea,
+select {
+  font-family: $primary-font;
+  font-size: 14px;
+  outline: none;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+section[id] {
+  scroll-margin-top: 30px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.second-font {
+  font-family: $secondary-font;
+}
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $primary-font;
+  height: 55px;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 6px;
+  &--primary {
+    background-color: $blue-color;
+  }
+  &--secondary {
+    background-color: transparent;
+    background-image: linear-gradient(to right, #f475a0, #feac3d);
+  }
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $gray;
+}
+.heading {
+  font-size: 36px;
+  line-height: lineH(56, 36);
+  font-weight: 800;
+  font-family: $secondary-font;
+  margin-bottom: 30px;
+}
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: $secondary-font;
+  line-height: lineH(35, 22);
+  margin-bottom: 20px;
+  display: block;
+  color: $gray;
+}
+.text {
+  font-size: 18px;
+  line-height: lineH(34, 18);
+}
+.text--small {
+  font-size: 14px;
+}
+@include maxw(767px) {
+  .heading {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}

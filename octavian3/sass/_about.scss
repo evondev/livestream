@@ -1,0 +1,49 @@
+.about {
+  padding-bottom: 190px;
+  .container {
+    position: relative;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 70px;
+  }
+  &-content {
+    max-width: 470px;
+  }
+  &-phone {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    max-width: initial;
+  }
+  &-image {
+    position: relative;
+  }
+  display: block;
+  @include maxWidth(1279px) {
+    padding-bottom: 100px;
+    &-main {
+      flex-direction: column;
+    }
+    &-content {
+      max-width: 600px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+  @include maxWidth(767px) {
+    &-image {
+      width: 100%;
+    }
+    &-phone {
+      max-width: 100%;
+    }
+    &-phone-under {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+}

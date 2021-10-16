@@ -1,0 +1,43 @@
+.blog {
+  padding: 150px 0;
+  &-header {
+    max-width: 560px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+  &-image {
+    margin-bottom: 40px;
+    display: block;
+  }
+  &-category {
+    color: $gray-light;
+  }
+  @include maxw(1023px) {
+    padding: 100px 0;
+    &-header {
+      margin-bottom: 50px;
+    }
+  }
+  @include maxw(767px) {
+    padding: 50px 0;
+    &-header {
+      margin-bottom: 30px;
+    }
+    &-list {
+      grid-template-columns: 1fr;
+    }
+    &-image {
+      margin-bottom: 20px;
+    }
+    &-image img {
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.review {
+  display: block;
+  &-header {
+    text-align: center;
+    max-width: 550px;
+    margin: 0 auto 90px;
+  }
+  &-content {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &-desc {
+    font-size: 30px;
+    color: white;
+    margin: 50px 0;
+  }
+  &-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    &-header {
+      margin-bottom: 40px;
+    }
+    &-desc {
+      margin: 25px 0;
+      font-size: 18px;
+    }
+    &-avatar {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+@mixin lhCrop($line-height) {
+  line-height: $line-height;
+  &::before {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    margin-top: calc((1 - #{$line-height}) * 1em);
+  }
+}
+.hero {
+  display: block;
+  &-main {
+    position: relative;
+  }
+  &-image {
+    width: 100%;
+    max-width: calc(calc(870 / 1170) * 100%);
+    margin-left: auto;
+  }
+  &-content {
+    color: white;
+    position: absolute;
+    left: 100px;
+    z-index: 2;
+  }
+  &-heading {
+    font-weight: bold;
+    font-size: 120px;
+    margin-bottom: 50px;
+    span {
+      display: block;
+    }
+  }
+  &-desc {
+    font-size: 24px;
+    max-width: 440px;
+    margin-bottom: 100px;
+    @include lhCrop(1.4);
+  }
+  &-contact {
+    text-decoration: underline;
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+  }
+  @media screen and (max-width: 1023px) {
+    &-heading {
+      font-size: 80px;
+      margin-bottom: 25px;
+    }
+    &-desc {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-content {
+      left: 15px;
+    }
+    &-heading {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    &-desc {
+      margin-bottom: 20px;
+      font-size: 18px;
+      max-width: 75%;
+    }
+    &-contact {
+      font-size: 16px;
+    }
+  }
+}

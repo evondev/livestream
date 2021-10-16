@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $primary-font;
+  font-size: 18px;
+  line-height: 1;
+  color: $gray-light;
+  background-color: $gray-darker;
+  overflow-x: hidden;
+}
+input,
+button,
+textarea,
+select {
+  font-family: $primary-font;
+  font-size: 16px;
+  outline: none;
+  border: 0;
+}
+input {
+  line-height: normal;
+}
+a {
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $secondary-font;
+}
+section[id] {
+  scroll-margin-top: 30px;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: url("../images/img1.jpg") no-repeat top / 100%;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.btn {
+  text-align: center;
+  font-weight: bold;
+  height: 55px;
+  padding: 0 70px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  &--primary {
+    color: white;
+    background-image: linear-gradient(
+      to right,
+      $primary-color,
+      $secondary-color
+    );
+  }
+  @include maxWidth(767px) {
+    height: 45px;
+    padding: 0 50px;
+    font-size: 14px;
+  }
+}
+section {
+  display: none;
+}

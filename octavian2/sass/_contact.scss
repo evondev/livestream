@@ -1,0 +1,56 @@
+.contact {
+  padding: 150px 0;
+  background: url("../images/contact-bg.png") no-repeat center / cover;
+  &-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &-header {
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-heading {
+    font-weight: 400;
+  }
+  &-heading,
+  &-desc {
+    color: white;
+  }
+  &-field {
+    padding: 20px 30px;
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(white, 0.5);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    color: white;
+    transition: border 0.2s linear;
+    &::-webkit-input-placeholder {
+      color: white;
+    }
+    &::-moz-input-placeholder {
+      color: white;
+    }
+    &:focus {
+      border-color: white;
+    }
+  }
+  &-area {
+    line-height: 1.55;
+    resize: none;
+    min-height: 100px;
+  }
+  @include maxw(1023px) {
+    padding: 100px 0;
+    &-header {
+      margin-bottom: 50px;
+    }
+  }
+  @include maxw(767px) {
+    padding: 50px 0;
+    &-header {
+      margin-bottom: 30px;
+    }
+  }
+}

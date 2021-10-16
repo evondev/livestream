@@ -1,0 +1,111 @@
+.footer {
+  &-top {
+    padding: 150px 0px;
+    background-color: $gray-dark;
+  }
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 130px;
+  }
+  &-logo {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  &-desc {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
+  }
+  .social-item {
+    cursor: pointer;
+    color: $gray-light;
+    &:hover {
+      color: white;
+    }
+  }
+  &-heading {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 40px;
+    font-weight: bold;
+  }
+  &-links {
+    list-style: none;
+  }
+  &-item {
+    margin-bottom: 30px;
+  }
+  &-link {
+    display: inline-block;
+    color: $gray-light;
+  }
+  &-info {
+    list-style: none;
+    margin-bottom: 40px;
+  }
+  &-info li {
+    margin-bottom: 15px;
+    line-height: lineH(30, 16);
+  }
+  &-highlight {
+    color: white;
+  }
+  &-bottom {
+    background-color: $gray-darker;
+    line-height: 1.6;
+  }
+  &-bottom a {
+    color: white;
+  }
+  &-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+  &-rocket {
+    color: white;
+    border-radius: 4px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue-color;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  @include maxw(1023px) {
+    &-top {
+      padding: 100px 0;
+    }
+    &-main {
+      grid-gap: 0 30px;
+    }
+  }
+  @include maxw(767px) {
+    &-top {
+      padding: 50px 0;
+    }
+    &-main {
+      grid-template-columns: 1fr;
+      grid-gap: 30px 0;
+    }
+    &-container {
+      padding: 35px 15px;
+    }
+    &-rocket {
+      width: 50px;
+      height: 50px;
+      right: 15px;
+    }
+  }
+}

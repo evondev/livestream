@@ -1,0 +1,32 @@
+.header {
+  padding: 40px 0;
+  border-bottom: 1px solid $gray-dark;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 0 65px;
+  font-size: 16px;
+  color: white;
+}
+.search-icon,
+.menu-toggle {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 20px 0;
+  }
+  .navigation {
+    gap: 0 30px;
+  }
+  .phone {
+    display: none;
+  }
+}

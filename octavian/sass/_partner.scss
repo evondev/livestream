@@ -1,0 +1,77 @@
+.partner {
+  display: block;
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0;
+    border: 1px solid $gray-dark;
+    border-radius: 8px;
+    position: relative;
+    width: 100%;
+  }
+  &-main:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: $gray-dark;
+  }
+  &-main:before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 25%,
+      $gray-dark calc(25% + 1px),
+      transparent calc(25% + 1px),
+      transparent 50%,
+      $gray-dark calc(50% + 1px),
+      transparent calc(50% + 1px),
+      transparent calc(75%),
+      $gray-dark calc(75% + 1px),
+      transparent calc(75% + 1px)
+    );
+    pointer-events: none;
+  }
+  &-item {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 767px) {
+    &-main {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    &-main:before {
+      background-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 25%,
+        $gray-dark calc(25% + 1px),
+        transparent calc(25% + 1px),
+        transparent 50%,
+        $gray-dark calc(50% + 1px),
+        transparent calc(50% + 1px),
+        transparent calc(75%),
+        $gray-dark calc(75% + 1px),
+        transparent calc(75% + 1px)
+      );
+    }
+    &-main:after {
+      height: 100%;
+      width: 1px;
+      top: 0;
+      left: 50%;
+    }
+  }
+}
