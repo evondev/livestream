@@ -1,0 +1,43 @@
+.hero {
+  margin-bottom: 190px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 34px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 445px;
+  }
+  &-heading {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 117%;
+    margin-bottom: 25px;
+    color: $black;
+  }
+  &-desc {
+    font-size: 21px;
+    line-height: 152%;
+    margin-bottom: 45px;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 100px;
+    &-heading {
+      font-size: 35px;
+    }
+    &-desc {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-main {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+    &-desc {
+      margin-bottom: 25px;
+    }
+  }
+}

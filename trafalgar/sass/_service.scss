@@ -1,0 +1,66 @@
+.service {
+  margin-bottom: 222px;
+  background: url("../images/bg1.png") no-repeat -100px center / auto;
+  --columns: 3;
+  &-dots {
+    right: 0;
+    top: 50%;
+    transform: translate(25%, -50%);
+    z-index: -1;
+  }
+  &-header {
+    text-align: center;
+    max-width: 952px;
+    margin: 0 auto 80px;
+  }
+  &-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: 34px;
+    margin-bottom: 71px;
+  }
+  &-item {
+    background: #ffffff;
+    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+    border-radius: 20px;
+    padding: 54px 37px 47px;
+  }
+  &-image {
+    margin-bottom: 40px;
+    height: 95px;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 24px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+  &-desc {
+    line-height: 175%;
+  }
+  &-more {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media screen and (max-width: 1023px) {
+    --columns: 2;
+    margin-bottom: 100px;
+    &-header {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    --columns: 1;
+    &-image {
+      height: auto;
+    }
+    &-list {
+      margin-bottom: 40px;
+    }
+    &-item {
+      padding: 40px 30px;
+    }
+  }
+}

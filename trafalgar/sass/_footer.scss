@@ -1,0 +1,59 @@
+.footer {
+  padding: 118px 0 113px;
+  background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
+  &-main {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-gap: 34px;
+    color: white;
+  }
+  &-logo {
+    display: inline-block;
+    margin-bottom: 17px;
+  }
+  &-desc {
+    margin-bottom: 31px;
+    font-size: 18px;
+    line-height: 156%;
+  }
+  &-heading {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  &-links {
+    list-style: none;
+  }
+  &-item {
+    margin-bottom: 15px;
+  }
+  &-link {
+    color: inherit;
+    font-size: 18px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 40px 0;
+    &-main {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@mixin generateDots($size, $spacing, $columns, $color: $primary-color) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 100rem;
+  $value: ();
+  @for $i from 0 to $columns {
+    @for $j from 0 to $columns {
+      $x: $i * $spacing + px;
+      $y: $j * $spacing + px;
+      $theShadow: $x $y $color;
+      $value: append($value, $theShadow, comma);
+    }
+  }
+  box-shadow: $value;
+}
+.dots {
+  margin: 200px;
+  @include generateDots(10px, 20, 5);
+}

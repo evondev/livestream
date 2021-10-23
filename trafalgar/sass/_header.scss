@@ -1,0 +1,18 @@
+.header {
+  margin-bottom: 80px;
+  padding-top: 56px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-dots {
+    left: 0;
+    transform: translate(-30%, 0);
+    top: 160px;
+  }
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 60px;
+    padding-top: 30px;
+  }
+}

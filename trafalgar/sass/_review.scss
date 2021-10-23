@@ -1,0 +1,135 @@
+.review {
+  margin-bottom: 200px;
+  padding-bottom: 62px;
+  position: relative;
+  &-dots1 {
+    left: 53px;
+    top: 0;
+    transform: translate(0, -50%);
+  }
+  &-heading {
+    --heading-color: white;
+    margin-bottom: 66px;
+  }
+  &-main {
+    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    border-radius: 24px;
+    padding: 64px 118px 80px;
+    overflow: hidden;
+  }
+  &-dots2 {
+    right: 0;
+    top: 0;
+    transform: translate(20%, -20%);
+  }
+  &-list.slick-slider {
+    position: unset;
+  }
+  &-content {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 30px;
+    color: white;
+    align-items: center;
+  }
+  &-customer {
+    display: flex;
+    align-items: center;
+    gap: 0 29px;
+  }
+  &-avatar {
+    width: 141px;
+    height: 141px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 4px solid white;
+      border-radius: 100rem;
+    }
+  }
+  &-name {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  &-job {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &-desc {
+    font-size: 19px;
+    line-height: 158%;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0 18px;
+    .slick-active button {
+      opacity: 1;
+    }
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 100rem;
+      background-color: #5b9bf3;
+      font-size: 0;
+      outline: none;
+      border: 0;
+      opacity: 0.3;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: $primary-color;
+    font-size: 20px;
+    left: 50%;
+  }
+  .slick-next {
+    transform: translate(120px, 0);
+    left: auto;
+    right: 50%;
+  }
+  .slick-prev {
+    transform: translate(-120px, 0);
+  }
+  @media screen and (max-width: 1023px) {
+    margin-bottom: 100px;
+    &-main {
+      padding: 40px 30px;
+    }
+    &-heading {
+      margin-bottom: 40px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-content {
+      grid-template-columns: 1fr;
+      grid-gap: 34px 0;
+    }
+    &-avatar {
+      width: 100px;
+      height: 100px;
+    }
+    &-customer {
+      gap: 0 15px;
+    }
+    &-name {
+      font-size: 18px;
+    }
+    &-desc,
+    &-job {
+      font-size: 16px;
+    }
+  }
+}
