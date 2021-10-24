@@ -13,6 +13,7 @@ window.addEventListener("load", function () {
     menuBg.classList.remove("is-active");
     menu.classList.remove("is-active");
     this.classList.remove("is-active");
+    // change
   });
 });
 $(".review-list").slick({
