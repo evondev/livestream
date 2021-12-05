@@ -1,0 +1,122 @@
+.feature {
+  padding: 0 15px;
+  margin-bottom: 160px;
+  &-main {
+    display: flex;
+    flex-direction: column;
+    gap: 160px 0;
+  }
+  &-header {
+    max-width: 888px;
+    margin: 0 auto 100px;
+    text-align: center;
+  }
+  &-heading {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 160%;
+  }
+  &-text {
+    font-size: 22px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    color: $gray;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 54px 0;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 0 42px;
+  }
+  &-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+    background: #fbfbfb;
+    box-shadow: 0px 15px 44px rgba(13, 15, 28, 0.12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &-section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  &-section:first-of-type {
+    max-width: 1610px;
+    gap: 0 126px;
+    .feature-content {
+      width: 100%;
+      max-width: 542px;
+    }
+    .feature-heading {
+      margin-bottom: 60px;
+    }
+  }
+  &-section:nth-of-type(2) {
+    max-width: 1470px;
+    .feature-heading {
+      max-width: 393px;
+    }
+    .feature-text {
+      max-width: 568px;
+    }
+    .feature-image {
+      max-width: 637px;
+    }
+  }
+  &-section:nth-of-type(3) {
+    max-width: 1490px;
+    .feature-heading {
+      max-width: 347px;
+    }
+    .feature-text {
+      max-width: 596px;
+    }
+    .feature-image {
+      max-width: 617px;
+    }
+  }
+  &-section:nth-of-type(4) {
+    max-width: 1575px;
+    .feature-heading {
+      max-width: 420px;
+    }
+    .feature-text {
+      max-width: 645px;
+    }
+    .feature-image {
+      max-width: 808px;
+    }
+  }
+  &-section:nth-of-type(5) {
+    max-width: 1515px;
+    margin-bottom: 150px;
+    .feature-heading {
+      max-width: 274px;
+    }
+    .feature-text {
+      max-width: 540px;
+    }
+    .feature-image {
+      max-width: 755px;
+    }
+  }
+  &-more {
+    color: $secondary-color;
+    border: 1px solid currentColor;
+    padding: 19px 38px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 400;
+  }
+}

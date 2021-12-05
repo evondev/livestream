@@ -1,0 +1,58 @@
+.introduce {
+  margin-bottom: 160px;
+  &-header {
+    max-width: 870px;
+    padding: 0 15px;
+    margin: 0 auto 103px;
+    text-align: center;
+  }
+  &-list {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 60px;
+  }
+  &-item {
+    background: #ffffff;
+    box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.08);
+    border-radius: 20px;
+    padding: 0 54px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+  &-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50px);
+    margin-bottom: 30px;
+  }
+  &-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.5;
+    color: $primary-color;
+    margin-bottom: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    min-height: 90px;
+    vertical-align: middle;
+  }
+  &-desc {
+    font-size: 20px;
+    line-height: 180%;
+    color: $gray;
+  }
+}

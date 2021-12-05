@@ -1,0 +1,51 @@
+.youcan {
+  max-width: 1580px;
+  padding: 0 15px;
+  margin: 0 auto 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 67px;
+  & > * {
+    width: 50%;
+  }
+  &-heading {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 160%;
+    margin-bottom: 30px;
+    span {
+      color: $secondary-color;
+    }
+  }
+  &-desc {
+    color: $gray;
+    font-size: 24px;
+    line-height: 180%;
+    letter-spacing: 0.02em;
+    margin-bottom: 30px;
+  }
+  &-more {
+    font-size: 22px;
+    line-height: 180%;
+    text-decoration: underline;
+    color: $gray;
+  }
+  &-image {
+    position: relative;
+  }
+  &-play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+}

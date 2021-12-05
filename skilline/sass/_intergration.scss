@@ -1,0 +1,29 @@
+.intergration {
+  max-width: 1490px;
+  padding: 0 15px;
+  margin: 0 auto 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-brand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 85px;
+    align-items: center;
+    max-width: 480px;
+  }
+  &-content {
+    width: 100%;
+    max-width: 688px;
+  }
+
+  &-heading {
+    font-family: $font-secondary;
+    margin-bottom: 30px;
+    line-height: 160%;
+  }
+  &-text {
+    margin-bottom: 44px;
+    line-height: 180%;
+  }
+}

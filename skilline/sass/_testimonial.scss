@@ -1,0 +1,46 @@
+.testimonial {
+  padding: 0 15px;
+  max-width: 1550px;
+  margin: 0 auto 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-content {
+    width: 100%;
+    max-width: 564px;
+  }
+  &-heading {
+    font-family: $font-secondary;
+    margin-bottom: 30px;
+  }
+  &-desc {
+    margin-bottom: 26px;
+    &:last-of-type {
+      margin-bottom: 43px;
+    }
+  }
+  &-button {
+    display: inline-flex;
+    span {
+      padding: 23px 60px 23px 40px;
+      border: 1px solid $secondary-color;
+      border-right: 0;
+      color: $secondary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-radius: 100rem 0 0 100rem;
+    }
+  }
+  &-arrow {
+    width: 80px;
+    height: 80px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $secondary-color;
+    transform: translateX(-50%);
+  }
+}
