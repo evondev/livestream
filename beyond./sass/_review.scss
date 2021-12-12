@@ -1,0 +1,122 @@
+.review {
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--section-spacing);
+  }
+  &-content {
+    width: 100%;
+    max-width: 400px;
+  }
+  &-number {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    color: $gray-blur;
+  }
+  &-count {
+    font-weight: 600;
+    font-size: 25px;
+    color: $third-color;
+  }
+  &-list {
+    width: 100%;
+    max-width: 523px;
+    grid-gap: 20px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    position: relative;
+    padding-left: 40px;
+  }
+  &-card {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px 8px 55px rgba(155, 162, 173, 0.17);
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+    & + .review-card {
+      margin-top: 20px;
+    }
+  }
+  &-rating {
+    display: flex;
+    align-items: center;
+    gap: 0 3px;
+    font-size: 8px;
+    color: black;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+  &-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    margin-bottom: 7px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-name {
+    color: $gray-dark;
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+  &-job {
+    font-weight: 500;
+    font-size: 7px;
+    color: $gray-blur-dark;
+    display: block;
+    margin-bottom: 8px;
+  }
+  &-desc {
+    font-size: 10px;
+    line-height: 14px;
+    color: #79899d;
+    margin-bottom: 24px;
+  }
+  &-quote img {
+    margin-left: auto;
+  }
+  .global-caption {
+    margin-bottom: 11px;
+  }
+  .global-heading {
+    margin-bottom: 25px;
+  }
+  .global-text {
+    margin-bottom: 20px;
+  }
+  &-bg {
+    position: absolute;
+  }
+  @media screen and (max-width: 1023px) {
+    &-container {
+      flex-direction: column;
+      gap: 35px;
+    }
+    &-content {
+      max-width: 100%;
+    }
+    &-list {
+      padding-left: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-list {
+      max-width: 100%;
+      grid-template-columns: 1fr;
+    }
+    &-bg {
+      display: none;
+    }
+  }
+}

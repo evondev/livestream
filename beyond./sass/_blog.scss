@@ -1,0 +1,82 @@
+.blog {
+  margin-bottom: var(--section-spacing);
+  &-header {
+    text-align: center;
+    margin-bottom: 78px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 34px;
+  }
+  &-item {
+    border-radius: 17px;
+    transition: all 0.2s linear;
+    &:hover {
+      background: #ffffff;
+      box-shadow: 0px 46px 100px -31px rgba(0, 0, 0, 0.1);
+      .blog-title {
+        color: $third-color;
+      }
+    }
+  }
+  &-content {
+    padding: 33px 23px;
+  }
+  &-image {
+    height: 322px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 17px 17px 0px 0px;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $gray-dark;
+    margin-bottom: 9px;
+    transition: all 0.2s linear;
+  }
+  &-desc {
+    font-size: 13px;
+    line-height: 20px;
+    color: $gray-blur;
+  }
+  .global-heading {
+    max-width: 454px;
+    margin: 0 auto 25px;
+  }
+  @media screen and (max-width: 1023px) {
+    &-header {
+      margin-bottom: 35px;
+    }
+    &-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: 300px;
+      grid-auto-flow: column;
+      grid-gap: 1.5rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 20px;
+      padding: 20px;
+      margin-left: -20px;
+      grid-template-columns: unset;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+    }
+  }
+}
