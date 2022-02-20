@@ -152,6 +152,18 @@ body {
   &-img {
     transform: translate(0, 78px);
   }
+  @media screen and (min-width: 1024px) {
+    .container {
+      position: relative;
+    }
+    &-img-small {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: translateY(87px);
+    }
+  }
+
   @media screen and (max-width: 1023.98px) {
     padding-bottom: 57px;
     &-contact {

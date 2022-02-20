@@ -167,6 +167,17 @@ body {
 .header-img {
   transform: translate(0, 78px);
 }
+@media screen and (min-width: 1024px) {
+  .header .container {
+    position: relative;
+  }
+  .header-img-small {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(87px);
+  }
+}
 @media screen and (max-width: 1023.98px) {
   .header {
     padding-bottom: 57px;
