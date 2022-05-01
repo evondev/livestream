@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 36px;
+  list-style: none;
+  &__link {
+    color: var(--grayb5);
+    transition: all 0.2s linear;
+    &:hover {
+      color: var(--white);
+    }
+  }
+}

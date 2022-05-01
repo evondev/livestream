@@ -1,0 +1,273 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --primary-font: "Sora", sans-serif;
+  --body-bg: #fdf9f1;
+  --gray1e: #1e1e1e;
+  --grayb5: #b5b3af;
+  --white: #fff;
+  --body-size: 1440px;
+  --container: 1100px;
+  --gap: 15px;
+  --primary-color: #00bd82;
+  --primary-yellow: #e2f471;
+}
+
+body {
+  background-color: var(--body-bg);
+  font-family: var(--primary-font);
+  font-weight: 400;
+}
+
+.wrapper {
+  max-width: var(--body-size);
+  margin: 0 auto;
+}
+
+.container {
+  max-width: calc(var(--container) + var(--gap) * 2);
+  padding: 0 var(--gap);
+  margin: 0 auto;
+}
+
+.text-primary {
+  background: linear-gradient(93.52deg, #e6ff4b 8.71%, #00bd82 98.16%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  border-radius: 10px;
+  line-height: 1;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  padding: 15px 30px;
+  font-size: 18px;
+}
+.button--primary {
+  background-color: var(--primary-color);
+}
+
+.heading {
+  font-weight: 600;
+  color: var(--gray1e);
+}
+.heading--big {
+  font-size: 50px;
+  line-height: calc(63 / 50);
+}
+.heading--normal {
+  font-size: 40px;
+  line-height: calc(50 / 40);
+}
+
+.text {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background-color: var(--gray1e);
+  padding: 48px 0 1px;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 83px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0 15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.header__logo span {
+  background: linear-gradient(93.52deg, #e6ff4b 8.71%, #00bd82 98.16%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-block;
+}
+.header__login {
+  display: inline-block;
+  color: white;
+  padding: 9px 25px;
+  background-color: var(--grayb5);
+  border-radius: 6px;
+  line-height: 1.625;
+}
+.header__content {
+  max-width: 873px;
+  margin: 0 auto;
+  text-align: center;
+}
+.header__heading {
+  font-size: 52px;
+  line-height: calc(62 / 52);
+  margin-bottom: 54px;
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 28px;
+  margin-bottom: 88px;
+}
+.header__works {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  color: white;
+  font-size: 18px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 0 36px;
+  list-style: none;
+}
+.menu__link {
+  color: var(--grayb5);
+  transition: all 0.2s linear;
+}
+.menu__link:hover {
+  color: var(--white);
+}
+
+.countdown {
+  background-color: var(--primary-yellow);
+  padding: 70px 0;
+}
+.countdown__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: center;
+}
+.countdown__title {
+  color: var(--gray1e);
+  font-weight: 600;
+  font-size: 44px;
+  margin-bottom: 22px;
+  line-height: calc(55 / 44);
+}
+.countdown__text {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}
+
+.newsletter {
+  padding: 140px 0 66px;
+}
+.newsletter-header {
+  text-align: center;
+  margin-bottom: 95px;
+}
+.newsletter-header .heading--big {
+  max-width: 629px;
+  margin: 0 auto 18px;
+}
+.newsletter-header .text {
+  max-width: 475px;
+  margin: 0 auto;
+}
+.newsletter-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.newsletter-content {
+  flex: 1;
+  max-width: 555px;
+}
+.newsletter-title {
+  margin-bottom: 18px;
+  max-width: 378px;
+}
+.newsletter-desc {
+  margin-bottom: 37px;
+}
+.newsletter-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.newsletter-icon {
+  margin-bottom: 19px;
+}
+.newsletter-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: calc(25 / 20);
+  margin-bottom: 9px;
+}
+.newsletter-text {
+  margin-bottom: 28px;
+}
+.newsletter-image {
+  flex-shrink: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
