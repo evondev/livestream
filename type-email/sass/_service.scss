@@ -1,0 +1,40 @@
+.service {
+  padding: 166px 0;
+  &-heading {
+    text-align: center;
+    margin-bottom: 58px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  &-item {
+    padding: 43px 35px 63px;
+    background-color: transparent;
+    transition: all 0.2s linear;
+
+    &:hover {
+      background-color: var(--body-bg);
+      box-shadow: 0px 16px 250px 10px rgba(155, 155, 155, 0.25);
+      .service-icon {
+        background-color: var(--primary-color);
+        color: white;
+      }
+    }
+  }
+  &-icon {
+    width: 66px;
+    height: 66px;
+    border-radius: 100rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 46px;
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: all 0.2s linear;
+  }
+  &-title {
+    margin-bottom: 13px;
+  }
+}
