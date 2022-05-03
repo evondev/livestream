@@ -31,6 +31,10 @@ body {
   &--primary {
     background-color: var(--primary-color);
   }
+  @include maxWidth(1023px) {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }
 .heading {
   font-weight: 600;
@@ -47,10 +51,24 @@ body {
     font-size: 22px;
     line-height: calc(32 / 22);
   }
+  @include maxWidth(1023px) {
+    &--big {
+      font-size: 30px;
+    }
+    &--normal {
+      font-size: 24px;
+    }
+    &--small {
+      font-size: 20px;
+    }
+  }
 }
 .text {
   font-size: 18px;
   line-height: calc(28 / 18);
+  @include maxWidth(1023px) {
+    font-size: 14px;
+  }
 }
 a {
   text-decoration: none;

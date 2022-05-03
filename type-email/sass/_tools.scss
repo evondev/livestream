@@ -23,4 +23,15 @@
     max-width: 362px;
     margin-bottom: 41px;
   }
+  @include maxWidth(1023px) {
+    padding: 60px 0;
+    &-main {
+      flex-direction: column;
+      gap: 40px 0;
+    }
+    &-image {
+      margin: 0 auto;
+      transform: none;
+    }
+  }
 }

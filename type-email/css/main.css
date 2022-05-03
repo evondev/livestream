@@ -15,8 +15,6 @@ body {
 
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 img,
@@ -99,6 +97,12 @@ body {
 .button--primary {
   background-color: var(--primary-color);
 }
+@media screen and (max-width: 1023px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
 
 .heading {
   font-weight: 600;
@@ -116,10 +120,26 @@ body {
   font-size: 22px;
   line-height: calc(32 / 22);
 }
+@media screen and (max-width: 1023px) {
+  .heading--big {
+    font-size: 30px;
+  }
+  .heading--normal {
+    font-size: 24px;
+  }
+  .heading--small {
+    font-size: 20px;
+  }
+}
 
 .text {
   font-size: 18px;
   line-height: calc(28 / 18);
+}
+@media screen and (max-width: 1023px) {
+  .text {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -191,12 +211,50 @@ a {
   color: white;
   font-size: 18px;
 }
+@media screen and (max-width: 1023px) {
+  .header {
+    margin-bottom: 60px;
+  }
+  .header-top {
+    justify-content: flex-start;
+  }
+  .header-logo {
+    font-size: 20px;
+  }
+  .header-top {
+    padding: 25px 0 55px;
+  }
+  .header-heading {
+    font-size: 30px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+  }
+  .header-login {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: 40px;
+  }
+  .header-buttons {
+    gap: 0 20px;
+    margin-bottom: 64px;
+  }
+  .header-works span {
+    display: none;
+  }
+}
 
 .menu {
   display: flex;
   align-items: center;
   gap: 0 36px;
   list-style: none;
+  padding: 0;
+}
+.menu-toggle {
+  display: none;
+}
+.menu-toggle * {
+  pointer-events: none;
 }
 .menu-link {
   color: var(--grayb5);
@@ -220,32 +278,73 @@ a {
 .menu-link:hover:before {
   width: 100%;
 }
+@media screen and (max-width: 1023px) {
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: var(--gray1e);
+    z-index: 9;
+    flex-direction: column;
+    align-items: stretch;
+    transform: translate(150%, 0);
+    transition: transform 0.25s ease-in;
+  }
+  .menu.is-show {
+    transform: none;
+  }
+  .menu-item {
+    margin-bottom: 15px;
+  }
+  .menu-link {
+    display: block;
+    padding: 15px;
+  }
+  .menu-link:before {
+    display: none;
+  }
+  .menu-toggle {
+    display: inline-block;
+  }
+}
 
 .countdown {
   background-color: var(--primary-yellow);
   padding: 70px 0 47px;
 }
-.countdown__list {
+.countdown-list {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   text-align: center;
 }
-.countdown__title {
+.countdown-title {
   color: var(--gray1e);
   font-weight: 600;
   font-size: 44px;
   margin-bottom: 22px;
   line-height: calc(55 / 44);
 }
-.countdown__text {
+.countdown-text {
   font-size: 18px;
   line-height: calc(28 / 18);
 }
+@media screen and (max-width: 1023px) {
+  .countdown {
+    padding: 60px 0;
+  }
+  .countdown-list {
+    flex-direction: column;
+    row-gap: 64px;
+    align-items: center;
+  }
+}
 
 .newsletter {
-  padding: 140px 0 66px;
+  padding: 140px 0 66px 9.236%;
 }
 .newsletter-header {
   text-align: center;
@@ -260,18 +359,7 @@ a {
   margin: 0 auto;
 }
 .newsletter-main {
-  position: relative;
   padding: 89px 0 72px;
-}
-.newsletter-main:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  background: rgba(239, 231, 215, 0.8);
-  width: 35%;
-  height: 100%;
-  top: 0;
-  z-index: -1;
 }
 .newsletter-container {
   display: flex;
@@ -321,6 +409,29 @@ a {
 .newsletter-image {
   flex-shrink: 0;
 }
+@media screen and (max-width: 1023px) {
+  .newsletter {
+    padding: 60px 20px;
+  }
+  .newsletter-main {
+    padding: 0;
+  }
+  .newsletter-header {
+    margin-bottom: 60px;
+  }
+  .newsletter-container {
+    flex-direction: column-reverse;
+  }
+  .newsletter-image {
+    margin-bottom: 45px;
+  }
+  .newsletter-desc {
+    margin-bottom: 65px;
+  }
+  .newsletter-list {
+    flex-direction: column;
+  }
+}
 
 .feature {
   padding: 102px 0 83px;
@@ -335,6 +446,7 @@ a {
   flex-shrink: 0;
 }
 .feature-content {
+  width: 100%;
   flex: 1;
   max-width: 548px;
 }
@@ -348,9 +460,18 @@ a {
   margin-top: 51px;
   padding: 16px 58px;
 }
+@media screen and (max-width: 1023px) {
+  .feature {
+    padding: 0;
+  }
+  .feature-main {
+    flex-direction: column;
+    gap: 64px 0;
+  }
+}
 
 .service {
-  padding: 166px 0;
+  padding: 166px 0 140px;
 }
 .service-heading {
   text-align: center;
@@ -366,11 +487,11 @@ a {
   background-color: transparent;
   transition: all 0.2s linear;
 }
-.service-item:hover {
+.service-item.is-active, .service-item:hover {
   background-color: var(--body-bg);
   box-shadow: 0px 16px 250px 10px rgba(155, 155, 155, 0.25);
 }
-.service-item:hover .service-icon {
+.service-item.is-active .service-icon, .service-item:hover .service-icon {
   background-color: var(--primary-color);
   color: white;
 }
@@ -387,6 +508,21 @@ a {
 }
 .service-title {
   margin-bottom: 13px;
+}
+@media screen and (max-width: 1023px) {
+  .service {
+    padding: 60px 0;
+  }
+  .service-heading {
+    margin-bottom: 35px;
+  }
+  .service-list {
+    grid-template-columns: 100%;
+    gap: 22px 0;
+  }
+  .service-item {
+    padding: 43px 63px 63px 35px;
+  }
 }
 
 .tools {
@@ -414,6 +550,19 @@ a {
 .tools-text {
   max-width: 362px;
   margin-bottom: 41px;
+}
+@media screen and (max-width: 1023px) {
+  .tools {
+    padding: 60px 0;
+  }
+  .tools-main {
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  .tools-image {
+    margin: 0 auto;
+    transform: none;
+  }
 }
 
 .testimonial {
@@ -459,6 +608,24 @@ a {
 .testimonial-rating {
   font-size: 18px;
   margin-top: 10px;
+}
+@media screen and (max-width: 1023px) {
+  .testimonial {
+    padding: 60px 0;
+  }
+  .testimonial-heading {
+    margin-bottom: 40px;
+  }
+  .testimonial-main {
+    flex-direction: column;
+    gap: 40px 0;
+  }
+  .testimonial-image {
+    height: auto;
+  }
+  .testimonial-text {
+    font-size: 16px;
+  }
 }
 
 .library {
@@ -528,6 +695,20 @@ a {
 }
 .library-more .icon {
   width: 20px;
+}
+@media screen and (max-width: 1023px) {
+  .library {
+    padding: 60px 0;
+  }
+  .library-tabs {
+    margin-bottom: 40px;
+  }
+  .library-tab {
+    font-size: 14px;
+  }
+  .library-list {
+    grid-template-columns: 100%;
+  }
 }
 
 .footer {

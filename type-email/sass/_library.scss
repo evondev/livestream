@@ -65,4 +65,16 @@
       width: 20px;
     }
   }
+  @include maxWidth(1023px) {
+    padding: 60px 0;
+    &-tabs {
+      margin-bottom: 40px;
+    }
+    &-tab {
+      font-size: 14px;
+    }
+    &-list {
+      grid-template-columns: 100%;
+    }
+  }
 }

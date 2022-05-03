@@ -1,5 +1,5 @@
 .service {
-  padding: 166px 0;
+  padding: 166px 0 140px;
   &-heading {
     text-align: center;
     margin-bottom: 58px;
@@ -13,7 +13,7 @@
     padding: 43px 35px 63px;
     background-color: transparent;
     transition: all 0.2s linear;
-
+    &.is-active,
     &:hover {
       background-color: var(--body-bg);
       box-shadow: 0px 16px 250px 10px rgba(155, 155, 155, 0.25);
@@ -36,5 +36,18 @@
   }
   &-title {
     margin-bottom: 13px;
+  }
+  @include maxWidth(1023px) {
+    padding: 60px 0;
+    &-heading {
+      margin-bottom: 35px;
+    }
+    &-list {
+      grid-template-columns: 100%;
+      gap: 22px 0;
+    }
+    &-item {
+      padding: 43px 63px 63px 35px;
+    }
   }
 }

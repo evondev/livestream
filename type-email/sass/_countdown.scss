@@ -1,22 +1,30 @@
 .countdown {
   background-color: var(--primary-yellow);
   padding: 70px 0 47px;
-  &__list {
+  &-list {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
     text-align: center;
   }
-  &__title {
+  &-title {
     color: var(--gray1e);
     font-weight: 600;
     font-size: 44px;
     margin-bottom: 22px;
     line-height: calc(55 / 44);
   }
-  &__text {
+  &-text {
     font-size: 18px;
     line-height: calc(28 / 18);
+  }
+  @include maxWidth(1023px) {
+    padding: 60px 0;
+    &-list {
+      flex-direction: column;
+      row-gap: 64px;
+      align-items: center;
+    }
   }
 }

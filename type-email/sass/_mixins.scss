@@ -1,0 +1,22 @@
+@mixin sectionBg($direction: "left") {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    background: rgba(239, 231, 215, 0.8);
+    width: 35%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    @if $direction == "left" {
+      left: 0;
+    } @else {
+      right: 0;
+    }
+  }
+}
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

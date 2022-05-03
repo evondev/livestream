@@ -1,5 +1,5 @@
 .newsletter {
-  padding: 140px 0 66px;
+  padding: 140px 0 66px 9.236%;
   &-header {
     text-align: center;
     margin-bottom: 95px;
@@ -13,18 +13,7 @@
     }
   }
   &-main {
-    position: relative;
     padding: 89px 0 72px;
-    &:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      background: rgba(239, 231, 215, 0.8);
-      width: 35%;
-      height: 100%;
-      top: 0;
-      z-index: -1;
-    }
   }
   &-container {
     display: flex;
@@ -73,5 +62,26 @@
   }
   &-image {
     flex-shrink: 0;
+  }
+  @include maxWidth(1023px) {
+    padding: 60px 20px;
+    &-main {
+      padding: 0;
+    }
+    &-header {
+      margin-bottom: 60px;
+    }
+    &-container {
+      flex-direction: column-reverse;
+    }
+    &-image {
+      margin-bottom: 45px;
+    }
+    &-desc {
+      margin-bottom: 65px;
+    }
+    &-list {
+      flex-direction: column;
+    }
   }
 }

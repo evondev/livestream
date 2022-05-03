@@ -10,6 +10,7 @@
     flex-shrink: 0;
   }
   &-content {
+    width: 100%;
     flex: 1;
     max-width: 548px;
   }
@@ -22,5 +23,12 @@
   &-link {
     margin-top: 51px;
     padding: 16px 58px;
+  }
+  @include maxWidth(1023px) {
+    padding: 0;
+    &-main {
+      flex-direction: column;
+      gap: 64px 0;
+    }
   }
 }
