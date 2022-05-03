@@ -1,0 +1,16 @@
+.footer {
+  padding: 70px 0;
+  background-color: var(--gray1e);
+  &-header {
+    text-align: center;
+    .heading--big {
+      margin-bottom: 15px;
+      color: white;
+    }
+    .text {
+      max-width: 339px;
+      margin: 0 auto 35px;
+      color: var(--grayb5);
+    }
+  }
+}

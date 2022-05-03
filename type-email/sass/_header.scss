@@ -1,52 +1,64 @@
 .header {
-  background-color: var(--gray1e);
-  padding: 48px 0 1px;
-  &__top {
+  background-image: linear-gradient(
+    to bottom,
+    var(--gray1e) 80%,
+    var(--body-bg) 80%
+  );
+  margin-bottom: 140px;
+  &-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 83px;
+    padding: 48px 0 83px;
   }
-  &__logo {
+  &-logo {
     display: flex;
     align-items: center;
     gap: 0 15px;
     font-size: 25px;
     font-weight: 600;
-    span {
-      background: linear-gradient(93.52deg, #e6ff4b 8.71%, #00bd82 98.16%);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-      display: inline-block;
-    }
   }
-  &__login {
+  &-logo-text {
+    background: linear-gradient(93.52deg, #e6ff4b 8.71%, #00bd82 98.16%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    display: inline-block;
+  }
+  &-login {
     display: inline-block;
     color: white;
     padding: 9px 25px;
-    background-color: var(--grayb5);
     border-radius: 6px;
     line-height: 1.625;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background-color: var(--grayb5);
+      opacity: 0.2;
+    }
   }
-  &__content {
+  &-content {
     max-width: 873px;
     margin: 0 auto;
     text-align: center;
   }
-  &__heading {
+  &-heading {
     font-size: 52px;
     line-height: calc(62 / 52);
     margin-bottom: 54px;
   }
-  &__buttons {
+  &-buttons {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0 28px;
     margin-bottom: 88px;
   }
-  &__works {
+  &-works {
     display: flex;
     align-items: center;
     gap: 0 16px;

@@ -13,10 +13,25 @@
     }
   }
   &-main {
+    position: relative;
+    padding: 89px 0 72px;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      background: rgba(239, 231, 215, 0.8);
+      width: 35%;
+      height: 100%;
+      top: 0;
+      z-index: -1;
+    }
+  }
+  &-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    width: 100%;
   }
   &-content {
     flex: 1;
@@ -28,12 +43,13 @@
   }
   &-desc {
     margin-bottom: 37px;
+    max-width: 508px;
   }
   &-list {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 20px;
+    gap: 74px;
   }
   &-icon {
     margin-bottom: 19px;
@@ -46,6 +62,14 @@
   }
   &-text {
     margin-bottom: 28px;
+    line-height: calc(26 / 16);
+  }
+  &-link {
+    text-underline-offset: 2px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--primary-color);
+    }
   }
   &-image {
     flex-shrink: 0;

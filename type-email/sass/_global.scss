@@ -22,7 +22,7 @@ body {
   display: inline-block;
   color: white;
   border-radius: 10px;
-  line-height: 1;
+  line-height: 1.5;
   cursor: pointer;
   border: 0;
   outline: none;
@@ -42,6 +42,10 @@ body {
   &--normal {
     font-size: 40px;
     line-height: calc(50 / 40);
+  }
+  &--small {
+    font-size: 22px;
+    line-height: calc(32 / 22);
   }
 }
 .text {
