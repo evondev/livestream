@@ -1,0 +1,56 @@
+.services {
+  margin: 150px 0 120px;
+  &-heading {
+    text-align: center;
+    font-size: 64px;
+    line-height: calc(72 / 64);
+    letter-spacing: -2px;
+    max-width: 970px;
+    margin: 0 auto 30px;
+  }
+  &-caption {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    line-height: calc(28 / 18);
+    margin-bottom: 80px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 30px;
+    list-style: none;
+    margin-bottom: 70px;
+  }
+  &-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 35px 60px;
+    background-color: white;
+    border: 1px solid rgba(97, 119, 152, 0.2);
+    border-radius: 20px;
+    transition: all 0.2s linear;
+    &:hover {
+      border-color: transparent;
+      box-shadow: 0px 20px 50px rgba(79, 119, 255, 0.2);
+    }
+  }
+  &-title {
+    margin: 22px 0 40px;
+    color: $text-black;
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: calc(32 / 22);
+  }
+  &-desc {
+    line-height: calc(26 / 16);
+  }
+  &-link {
+    padding: 0 32px;
+    height: 60px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  color: $text;
+  line-height: 1;
+  background-color: white;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.button {
+  all: unset;
+  color: white;
+  border-radius: 5px;
+  background-color: $primary-color;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: calc(24 / 15);
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+.heading {
+  color: $text-heading;
+  font-weight: 500;
+  font-family: $secondary-font;
+}

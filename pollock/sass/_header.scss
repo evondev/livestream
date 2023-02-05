@@ -1,0 +1,80 @@
+.header {
+  background-color: $grayf7;
+  padding: 16px 0 230px;
+  position: relative;
+  &-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-shapes {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+  }
+  &-scroll-inner {
+    border-radius: 100rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $yellow;
+    animation: bounced 1s linear infinite alternate;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: $text-heading;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: $secondary-font;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  &-link {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $text;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $secondary-font;
+    &:hover {
+      color: $text-heading;
+    }
+  }
+}
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.button-signup {
+  padding: 0 38.5px;
+  height: 48px;
+}
+@keyframes bounced {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
