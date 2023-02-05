@@ -1,0 +1,90 @@
+.footer {
+  background-color: $bg-gray;
+  color: white;
+  &-top {
+    padding: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    .logo {
+      color: white;
+    }
+  }
+  &-bottom {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top: 1px solid rgba(123, 136, 168, 0.3);
+  }
+  &-s {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-item {
+      background-color: $primary-color;
+      width: 52px;
+      height: 52px;
+      border-radius: 100rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &-heading {
+    font-size: 22px;
+    line-height: calc(32 / 22);
+    margin-bottom: 20px;
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+  }
+  &-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: calc(24 / 14);
+  }
+  &-column {
+    flex-shrink: 0;
+    &:last-child {
+      max-width: 370px;
+    }
+  }
+  .newsletter {
+    &-desc {
+      line-height: calc(26 / 16);
+      margin-bottom: 25px;
+    }
+    &-form {
+      display: flex;
+      height: 48px;
+      width: 100%;
+      gap: 6px;
+    }
+    &-input {
+      all: unset;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 0 18px;
+      color: $text;
+      flex: 1;
+    }
+    &-button {
+      flex-shrink: 0;
+      padding: 0 24px;
+    }
+    &-warning {
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: calc(24 / 14);
+    }
+  }
+}
