@@ -1,0 +1,7 @@
+section.logos
+  .container.logos-container
+    h2.heading.logos-heading Working with the most trusted brands in the industry
+    ul.logos-list
+      each image in ["/images/logo-google.png 2x","/images/logo-netflix.png 2x", "/images/logo-slack.png 2x","/images/logo-intercom.png 2x"]
+        li.logos-item
+          img(srcSet= image, alt="")

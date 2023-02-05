@@ -1,0 +1,36 @@
+.portfolio {
+  padding: 120px 0;
+  &-heading {
+    text-align: center;
+    font-size: 42px;
+    line-height: calc(50 / 42);
+    max-width: 970px;
+    margin: 0 auto 100px;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-decoration: none;
+    color: $primary-color;
+    font-size: 22px;
+    line-height: calc(32 / 22);
+    &:first-child {
+      grid-column: 1 / span 7;
+    }
+    &:nth-child(2) {
+      grid-column: 8 / -1;
+    }
+    &:nth-child(3) {
+      grid-column: 1 / span 5;
+    }
+    &:last-child {
+      grid-column: 6 / -1;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 50px 30px;
+  }
+}

@@ -40,3 +40,7 @@ body {
   font-weight: 500;
   font-family: $secondary-font;
 }
+.text {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+}

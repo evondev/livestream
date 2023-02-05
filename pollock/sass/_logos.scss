@@ -1,0 +1,17 @@
+.logos {
+  margin-bottom: 120px;
+  &-heading {
+    color: black;
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 36px;
+    line-height: calc(46 / 36);
+  }
+  &-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}
