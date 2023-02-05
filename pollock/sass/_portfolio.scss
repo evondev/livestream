@@ -2,8 +2,6 @@
   padding: 120px 0;
   &-heading {
     text-align: center;
-    font-size: 42px;
-    line-height: calc(50 / 42);
     max-width: 970px;
     margin: 0 auto 100px;
   }
@@ -32,5 +30,18 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 50px 30px;
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 80px 0;
+    &-heading {
+      margin-bottom: 40px;
+    }
+    &-list {
+      gap: 30px 15px;
+    }
+    &-item {
+      gap: 15px;
+      font-size: 16px;
+    }
   }
 }

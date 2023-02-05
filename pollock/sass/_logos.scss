@@ -1,11 +1,9 @@
 .logos {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
   &-heading {
     color: black;
     text-align: center;
     margin-bottom: 80px;
-    font-size: 36px;
-    line-height: calc(46 / 36);
   }
   &-list {
     list-style-type: none;
@@ -13,5 +11,15 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
+  }
+  @media screen and (max-width: 767.98px) {
+    padding-bottom: 80px;
+    &-heading {
+      margin-bottom: 40px;
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

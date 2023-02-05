@@ -78,3 +78,32 @@
     transform: translateY(10px);
   }
 }
+@media screen and (max-width: 1023.98px) {
+  .header {
+    padding-bottom: 80px;
+  }
+  .button-signup {
+    display: none;
+  }
+  .menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 20;
+    background-color: $bg-gray;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    transition: all 0.2s linear;
+    transform: translateX(100%);
+    &-link {
+      padding: 10px;
+      color: white;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

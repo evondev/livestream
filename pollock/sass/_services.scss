@@ -1,10 +1,7 @@
 .services {
-  margin: 150px 0 120px;
+  padding: 150px 0 120px;
   &-heading {
     text-align: center;
-    font-size: 64px;
-    line-height: calc(72 / 64);
-    letter-spacing: -2px;
     max-width: 970px;
     margin: 0 auto 30px;
   }
@@ -52,5 +49,20 @@
     padding: 0 32px;
     height: 60px;
     margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1023.98px) {
+  .services {
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .services {
+    &-list {
+      grid-template-columns: 1fr;
+    }
+    &-title {
+      margin: 10px 0 20px;
+    }
   }
 }

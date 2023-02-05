@@ -47,9 +47,7 @@
   &-link {
     text-decoration: none;
     color: inherit;
-    font-size: 14px;
     text-transform: uppercase;
-    line-height: calc(24 / 14);
   }
   &-column {
     flex-shrink: 0;
@@ -59,7 +57,6 @@
   }
   .newsletter {
     &-desc {
-      line-height: calc(26 / 16);
       margin-bottom: 25px;
     }
     &-form {
@@ -83,8 +80,18 @@
     }
     &-warning {
       margin-top: 15px;
-      font-size: 14px;
-      line-height: calc(24 / 14);
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-top {
+      padding: 50px 0;
+      flex-direction: column;
+      gap: 30px;
+    }
+    &-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
     }
   }
 }
