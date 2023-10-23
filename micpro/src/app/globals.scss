@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-base text-dark font-normal pb-20 leading-tight font-sora;
+  }
+}
+@layer components {
+  .l-container {
+    max-width: 1260px;
+    @apply mx-auto px-5;
+  }
+  .main-container {
+    max-width: 1210px;
+    @apply mx-auto px-5;
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #f961d8 20.98%, #1663f9 59.51%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
